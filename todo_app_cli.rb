@@ -30,7 +30,7 @@ loop do
     puts "\n--- Todas las Tareas ---"
     tasks = todo_list.all_tasks
     tasks.each_with_index do |task, index|
-      status = task[:completed] ? "Completada" : "Pendiente"
+      status = task[:completed] == 1 ? "Completada" : "Pendiente"
       puts "#{index + 1}. [ID: #{task[:id]}] #{task[:description]} - #{status}"
     end
 

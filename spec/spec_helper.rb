@@ -13,7 +13,16 @@
 # it.
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+require_relative '../db_setup_test'
+
 RSpec.configure do |config|
+
+ config.before(:suite) do
+    # Ejecutar el script de configuración de la base de datos
+    system('ruby db_setup_test.rb')
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
