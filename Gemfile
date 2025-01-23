@@ -5,3 +5,4 @@ gem 'rspec'
 gem 'guard'
 gem 'guard-rspec', require: false
 gem 'reline'
+gem 'json'
